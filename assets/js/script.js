@@ -8,7 +8,39 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
+  console.log('Hello')
+  $(document).ready(function(){
+    //function to activate upon click
+    $('#pastBtn').click(function() {
+      //Variable created to get text
+      var inputText = $('#firstField').val();
+      alert(inputText);
+      //Local storage call to store input data
+      localStorage.setItem('Past agenda', inputText);
+      console.log(inputText)
+    });
+
+    $('#presentBtn').click(function() {
+      //Variable created to get text
+      var inputText = $('#secondField').val();
+      alert(inputText);
+      //Local storage call to store input data
+      localStorage.setItem('Present agenda', inputText);
+      console.log(inputText)
+    });
+
+    $('#futureBtn').click(function() {
+      //Variable created to get text
+      var inputText = $('#thirdField').val();
+      alert(inputText);
+      //Local storage call to store input data
+      localStorage.setItem('Future agenda', inputText);
+      console.log(inputText)
+    });
+  });
+ 
+
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
