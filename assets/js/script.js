@@ -10,6 +10,11 @@ $(function () {
   // useful when saving the description in local storage?
   console.log('Hello')
   $(document).ready(function(){
+    //Creates a variable with the current date through a dayjs function call
+    var now = dayjs().format('MM/DD/YYYY');
+    console.log(now)
+    //This sends the current date to the HTML
+    $('#currentDay').html(now);
     //function to activate upon click
     $('#pastBtn').click(function() {
       //Variable created to get text
