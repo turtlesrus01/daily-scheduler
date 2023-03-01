@@ -42,6 +42,30 @@ $(function () {
       localStorage.setItem('Future agenda', inputText);
       console.log(inputText)
     });
+    //test addClass function
+    //$('#hour-9').addClass('present');
+
+    //This each function will check each time block and compare to the current time
+    $('.time-block').each(function(index) {
+      //Test print of the index of the item and its container text
+      //console.log(index + ': ' + $(this).text())
+      //variable to pull and store the current hour 
+      var date1 = dayjs().format('HHA');
+      //console.log(date1<'9AM')
+      //console.log($(this).text());
+      //If statement that compares current hour to the text block hour
+      //Then adds the appropriate class to the block accordingly
+      if (date1>$(this).text()){
+        $(this).addClass('past');
+      } else if (date1===$(this).text()) {
+        $(this).addClass('present');
+      } else if (date1<$(this).text()) {
+        $(this).addClass('future');
+      } else {
+        return;
+      }
+    });
+
   });
  
 
