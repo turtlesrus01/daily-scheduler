@@ -9,6 +9,9 @@ The application has 8 hour sections to type in your plans for the day. Once fini
 
 ![photo of website](./assets/img/Screenshot%202023-03-01%20231927.png)
 
+## Link to application
+https://turtlesrus01.github.io/daily-scheduler/
+
 ## Support
 Reach out to me if you have any questions or if you have questions at:
 
