@@ -48,23 +48,25 @@ $(function () {
     //This each function will check each time block and compare to the current time
     $('.time-block').each(function(index) {
       //Test print of the index of the item and its container text
-      console.log(index + ': ' + $(this).text().trim().replace("P", '').replace("A", '').replace("M", ''));
+      console.log(index + ': ' + $(this).attr('id').slice(-2));
+
       //variable to pull and store the current hour 
       var hour1 = dayjs().format('HH');
-      //console.log(date1<'9AM')
+      //console.log(hour1)
+      //console.log(hour1<$('#hour- 9').slice(-2))
       //console.log($(this).text());
       //If statement that compares current hour to the text block hour
       //Then adds the appropriate class to the block accordingly
-      console.log(hour1<$(this).text().trim().replace("P", '').replace("A", '').replace("M", ''))
-      if (hour1>$(this).text().trim()){
+      console.log(hour1<$(this).attr('id').slice(-2))
+      if (hour1>$(this).attr('id').slice(-2)){
         $(this).addClass('past');
         console.log(hour1)
-        console.log($(this).text().trim())
-        console.log(hour1===$(this).text().trim())
-      } else if (hour1===$(this).text().trim().replace("P", '').replace("A", '').replace("M", '')) {
+        //console.log($(this).text().trim())
+        //console.log(hour1===$(this).text().trim())
+      } else if (hour1===$(this).attr('id').slice(-2)) {
         $(this).addClass('present');
         console.log('here2')
-      } else if (hour1<$(this).text().trim().replace("P", '').replace("A", '').replace("M", '')) {
+      } else if (hour1<$(this).attr('id').slice(-2)) {
         $(this).addClass('future');
         console.log('here3')
       } else {
