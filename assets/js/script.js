@@ -16,9 +16,9 @@ $(function () {
     //This sends the current date to the HTML
     $('#currentDay').html(now);
     //function to activate upon click
-    $('#saveBtn').click(function() {
+    $('.saveBtn').click(function() {
       //Variable created to get text
-      var inputText = $('#description').val();
+      var inputText = $('#description').text();
       alert(inputText);
       //Local storage call to store input data
       localStorage.setItem($('#saveBtn').attr('id')+' agenda', inputText);
@@ -74,6 +74,14 @@ $(function () {
       }
     });
 
+    $('.saveBtn').click(function() {
+      //Variable created to get text
+      var inputText = $('.description').val();
+      alert(inputText);
+      //Local storage call to store input data
+      localStorage.setItem($(this).attr('id')+' agenda', inputText);
+      console.log(inputText)
+    });
   });
  
 
